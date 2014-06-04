@@ -19,6 +19,7 @@
 ## 3. Options
 
 Option | Default value | Comment
+------ | ------------- | -------
 labelTrue | ON | Label for 'true' state
 labelFalse | OFF | Label for 'false' state
 valueTrue | true | Value for 'true' state
