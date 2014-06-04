@@ -1,3 +1,14 @@
+/**
+ * Bootswitch (https://github.com/baboulaz/bootstrap-switch)
+ *
+ * A jQuery plugin to use with Bootstrap 3 for having simple switch
+ *
+ * @version     v0.1
+ * @author      https://github.com/baboulaz
+ * @copyright   (c) 2014
+ * @license     MIT
+ */
+ 
 (function($) {
 	$.fn.bootswitch=function(params) {
 		this.each(function() {
