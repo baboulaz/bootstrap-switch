@@ -9,6 +9,24 @@
  * @license     MIT
  */
  
+var ie = (function ie(){
+    var undef,rv = -1; // Return value assumes failure.
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf('MSIE ');
+    var trident = ua.indexOf('Trident/');
+
+    if (msie > 0) {
+        // IE 10 or older => return version number
+        rv = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+    } else if (trident > 0) {
+        // IE 11 (or newer) => return version number
+        var rvNum = ua.indexOf('rv:');
+        rv = parseInt(ua.substring(rvNum + 3, ua.indexOf('.', rvNum)), 10);
+    }
+
+    return ((rv > -1) ? rv : undef);
+}());
+
 (function($) {
 	$.fn.bootswitch=function(params) {
 		this.each(function() {
